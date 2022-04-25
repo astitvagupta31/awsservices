@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Delete S3 Bucket</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <style>
+            body{
+                height:100vh;
+                display:flex;
+                flex-direction:column;
+                font-family: 'Roboto', sans-serif;
+                background-color:lightyellow;
+                color:black;
+                text-align:center;
+              }
+
+              .dark-mode {
+                background-color: black;
+                color: white;
+              }
+              
+              .footer {
+                position: fixed;
+                right: 0;
+                top: 0;
+                width: 7%;
+                background-color: lightyellow;
+                color: black;
+                text-align: center;
+             }
+             input {
+                font-size: 1rem;
+                outline: none;
+                border: 1px solid black;
+                border-radius: 5px;  
+                padding: 0.3rem 0.4rem;
+            }     
+              input:hover{
+                  background-color:wheat;
+              }
+        </style>  
+    </head>
+    <body>
+      <h1>Enter Your S3 Bucket Username To Delete Your Bucket</h1>
+        <form action="/deleted_s3_bucket" method="post">
+            <label><b>Enter Your Bucket name : </b></label>
+               <input type="text" id="s3bucketdelete_id" name="s3bucketdelete_id" />
+               <input type="submit" value="submit"/>
+        </form>
+
+        <button onclick="myFunction()" class="footer">Dark Theme</button>
+
+        <script>
+            function myFunction() {
+               var element = document.body;
+               element.classList.toggle("dark-mode");
+            }
+            </script>
+    </body>
+</html>
+
+

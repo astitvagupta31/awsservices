@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>HomePage Content</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                height:100vh;
+                display:flex;
+                flex-direction:column;
+                font-family: 'Roboto', sans-serif;
+                background-color:lightyellow;
+                color:black;
+              }
+              
+              h2{
+                margin:0px;
+                text-transform: uppercase;
+              }
+              .dis{
+                  margin:30px;
+              }
+              
+              h6{
+                margin:0px;
+                color:#777;
+              }
+              
+              .wrapper{
+                text-align:center;
+                margin:40px auto;
+              }
+              
+              .tabs{
+                margin-top:22px;
+                font-size:15px;
+                padding:0px;
+                list-style:none;
+                background:#fff;
+                box-shadow:0px 5px 20px rgba(0,0,0,0.1);
+                display:inline-block;
+                border-radius:50px;
+                position:relative;
+              }
+              
+              .tabs a{
+                text-decoration:none;
+                color: #777;
+                text-transform:uppercase;
+                padding:10px 20px;
+                display:inline-block;
+                position:relative;
+                z-index:1;
+                transition-duration:0.6s;
+              }
+              
+              .tabs a.active{
+                color:#fff;
+              }
+              
+              .tabs a i{
+                margin-right:5px;
+              }
+
+              a {
+                background-image: linear-gradient(
+                  to right,
+                  #54b3d6,
+                  #54b3d6 50%,
+                  #000 50%
+                );
+                background-size: 200% 100%;
+                background-position: -100%;
+                display: inline-block;
+                padding: 5px 0;
+                position: relative;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all 0.3s ease-in-out;
+              }
+              
+              a:before{
+                content: '';
+                background: #54b3d6;
+                display: block;
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 0;
+                height: 3px;
+                transition: all 0.3s ease-in-out;
+              }
+              
+              a:hover {
+               background-position: 0;
+              }
+              
+              a:hover::before{
+                width: 100%;
+              }
+
+              .newdis{
+                    margin-bottom:25px;
+              }
+
+              .dark-mode {
+                background-color: black;
+                color: white;
+              }
+              
+              .footer {
+                position: fixed;
+                right: 0;
+                top: 0;
+                width: 7%;
+                background-color: lightyellow;
+                color: black;
+                text-align: center;
+             }
+             button:hover{
+                background-color:wheat;
+             }
+
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+        <h1>Welcome To The HomePage</h1><hr>
+        <h2 class="dis">EC2 Services</h2>
+        <nav class="tabs">
+        <a href="/create_ec2">CREATE INSTANCE</a>
+        <a href="/terminate_ec2">TERMINATE INSTANCE</a>
+        <a href="/stop_ec2">STOP INSTANCE</a>
+        <a href="/start_ec2">START INSTANCE</a>
+        <a href="/running_ec2">GET RUNNING INSTANCES</a>
+    </nav></div>
+
+        <div class="wrapper">
+        <h2 class="newdis">IAM Services</h2>
+        <nav class="tabs">
+        <a href="/create_iam_user">CREATE IAM USER</a>
+        <a href="/listall_iam_users">LIST ALL IAM USERS</a>
+        <a href="/delete_iam_user">DELETE IAM USER</a>
+        </nav>
+        </div>
+
+        <div class="wrapper">
+          <h2 class="newdis">S3 Services</h2>
+          <nav class="tabs">
+          <a href="/create_s3_bucket">CREATE S3 BUCKET</a>
+          <a href="/delete_s3_bucket">DELETE S3 BUCKET</a>
+          <a href="/listbucket">LIST S3 BUCKETS</a>
+          </nav>
+          </div>
+        <button onclick="myFunction()" class="footer">Dark Theme</button>
+    </body>
+</html>
+
+<script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+
+   
